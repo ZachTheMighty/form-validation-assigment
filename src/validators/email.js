@@ -1,3 +1,5 @@
+import validateEmpty from "./empty.js";
+
 export default function (email) {
   const emailRegex = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
 
@@ -9,5 +11,5 @@ export default function (email) {
     );
   else email.setCustomValidity("");
 
-  email.reportValidity();
+  validateEmpty(email);
 }

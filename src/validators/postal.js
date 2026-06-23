@@ -1,12 +1,10 @@
+import validateEmpty from "./empty.js";
+
 export default function (country, postalCode) {
-  if (postalCode.value.length === 0)
-    postalCode.setCustomValidity("This field can't be empty");
-  else if (
-    !new RegExp(getCountry(country.value).postalCode).test(postalCode.value)
-  )
+  if (!new RegExp(getCountry(country.value).postalCode).test(postalCode.value))
     postalCode.setCustomValidity(getCountry(country.value).errorMessage);
   else postalCode.setCustomValidity("");
-  postalCode.reportValidity();
+  validateEmpty(postalCode);
 }
 
 function getCountry(country) {
