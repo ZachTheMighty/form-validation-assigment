@@ -74,6 +74,14 @@ input:hover {
   filter: brightness(0.95);
 }
 
+input:focus:hover {
+  filter: brightness(1);
+}
+
 button:hover {
   filter: brightness(0.8);
+}
+
+input:invalid {
+  outline: 2px solid red;
 }
