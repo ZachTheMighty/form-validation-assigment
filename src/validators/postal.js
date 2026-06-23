@@ -1,4 +1,15 @@
 export default function (country, postalCode) {
+  if (postalCode.value.length === 0)
+    postalCode.setCustomValidity("This field can't be empty");
+  else if (
+    !new RegExp(getCountry(country.value).postalCode).test(postalCode.value)
+  )
+    postalCode.setCustomValidity(getCountry(country.value).errorMessage);
+  else postalCode.setCustomValidity("");
+  postalCode.reportValidity();
+}
+
+function getCountry(country) {
   const countries = {
     switzerland: {
       postalCode: "^(CH-)?\\d{4}$",
@@ -25,12 +36,5 @@ export default function (country, postalCode) {
     },
   };
 
-  if (postalCode.value.length === 0)
-    postalCode.setCustomValidity("This field can't be empty");
-  else if (
-    !new RegExp(countries[country.value].postalCode).test(postalCode.value)
-  )
-    postalCode.setCustomValidity(countries[country.value].errorMessage);
-  else postalCode.setCustomValidity("");
-  postalCode.reportValidity();
+  return countries[country];
 }
