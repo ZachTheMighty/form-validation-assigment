@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
     "deploy": "git subtree push --prefix dist origin gh-pages",
@@ -21,5 +21,18 @@
   "bugs": {
     "url": "https://github.com/ZachTheMighty/form-validation-assigment/issues"
   },
-  "homepage": "https://github.com/ZachTheMighty/form-validation-assigment#readme"
+  "homepage": "https://github.com/ZachTheMighty/form-validation-assigment#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "css-loader": "^7.1.4",
+    "eslint": "^10.5.0",
+    "globals": "^17.7.0",
+    "html-webpack-plugin": "^5.6.7",
+    "prettier": "3.8.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.3",
+    "webpack-dev-server": "^5.2.5",
+    "webpack-merge": "^6.0.1"
+  }
 }
