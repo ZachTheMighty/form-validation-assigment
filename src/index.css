@@ -52,7 +52,8 @@ button {
   font-weight: inherit;
 }
 
-input {
+input,
+select {
   border: 0;
   background-color: #f0f0f0;
   padding: 8px;
