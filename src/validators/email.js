@@ -1,4 +1,4 @@
-export default function validateEmail(email) {
+export default function (email) {
   const emailRegex = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
 
   if (email.value.length === 0)
