@@ -20,3 +20,4 @@ form.addEventListener("submit", (event) => {
 
 email.addEventListener("input", () => validateEmail(email));
 postal.addEventListener("input", () => validatePostal(country, postal));
+password.addEventListener("input", () => validatePassword(password, confirm));
